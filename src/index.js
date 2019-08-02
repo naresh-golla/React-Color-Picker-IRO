@@ -12,14 +12,14 @@ class App extends React.Component {
   }
   onColorChange = color => {
     this.setState({
-      color: color
+      color: color.hexString
     });
     // console.log(color.hexString);
   };
   render() {
     console.log(this.state.color.hexString);
     return (
-      <div className="App" style={{ background: this.state.color }}>
+      <div style={{ background: `${this.state.color}` }}>
         <IroColorPicker
           color={this.state.color}
           onColorChange={this.onColorChange}
