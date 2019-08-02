@@ -19,7 +19,7 @@ class App extends React.Component {
   render() {
     console.log(this.state.color);
     return (
-      <div className="App">
+      <div className="App" style={{ background: this.state.color }}>
         <IroColorPicker color={"#fff"} onColorChange={this.onColorChange} />
       </div>
     );
