@@ -11,6 +11,9 @@ class App extends React.Component {
     };
   }
   onColorChange = color => {
+    this.setState({
+      color: color
+    });
     console.log(color.hexString);
   };
   render() {
